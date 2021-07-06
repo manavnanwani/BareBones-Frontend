@@ -18,7 +18,7 @@ const SubHome = () => {
           </Typography>
         </Paper>
         {subData?.map((sub) => (
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper} key={sub._id}>
             <Typography variant="h6" style={{ color: "white" }}>
               Name: {sub.title}
             </Typography>

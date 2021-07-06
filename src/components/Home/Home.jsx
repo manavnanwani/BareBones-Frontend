@@ -1,12 +1,5 @@
-import React, { useState } from "react";
-import {
-  Container,
-  Grow,
-  Grid,
-  Paper,
-  Button,
-  Typography,
-} from "@material-ui/core";
+import React from "react";
+import { Container, Grow, Grid, Paper, Button } from "@material-ui/core";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -28,9 +21,6 @@ const Home = ({ currentId, setCurrentId }) => {
 
   const page = query.get("page") || 1;
   const searchQuery = query.get("searchQuery");
-
-  const [search, setSearch] = useState("");
-  const [tags, setTags] = useState([]);
 
   return (
     <Grow in>
@@ -58,7 +48,7 @@ const Home = ({ currentId, setCurrentId }) => {
 
           <Grid item xs={12} sm={4} md={4}>
             <Community subData={subData?.slice(0, 5)} />
-            {!searchQuery && !tags.length && (
+            {!searchQuery && (
               <Paper className={classes.pagination} elevation={6}>
                 <Pagination page={page} />
               </Paper>

@@ -37,7 +37,7 @@ export default (state = { isLoading: true, posts: [] }, action) => {
         posts: action.payload,
       };
     case CREATE:
-      return { ...state, posts: [...state.posts, action.payload] };
+      return { ...state, posts: [...[state.posts], action.payload] };
     case UPDATE:
     case LIKEPOST:
     case DISLIKEPOST:
