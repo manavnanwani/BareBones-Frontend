@@ -25,11 +25,7 @@ export const likePost = (id) => API.patch(`/posts/${id}/upvotePost`);
 export const dislikePost = (id) => API.patch(`/posts/${id}/downvote`);
 
 export const fetchPostsBySearch = (searchQuery) =>
-  API.get(
-    `/posts/search?searchQuery=${searchQuery.search || "none"}&tags=${
-      searchQuery.tags
-    }`
-  );
+  API.get(`/posts/search?searchQuery=${searchQuery.search || "none"}`);
 
 export const signIn = (formData) => API.post("/user/signin", formData);
 export const signUp = (formData) => API.post("/user/signup", formData);

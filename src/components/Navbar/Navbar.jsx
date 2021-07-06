@@ -26,8 +26,6 @@ const Navbar = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
   const [search, setSearch] = useState("");
 
-  const tags = "search";
-
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       searchPost();
@@ -35,10 +33,8 @@ const Navbar = () => {
   };
   const searchPost = () => {
     if (search.trim()) {
-      dispatch(getPostsBySearch({ search, tags: tags }));
-      history.push(
-        `/posts/search?searchQuery=${search || "none"}&tags=${tags}`
-      );
+      dispatch(getPostsBySearch({ search }));
+      history.push(`/posts/search?searchQuery=${search || "none"}`);
     } else {
       history.push("/");
     }

@@ -7,7 +7,7 @@ import {
   CardMedia,
   Button,
   Typography,
-  ButtonBase,
+  // ButtonBase,
   Grid,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -20,7 +20,7 @@ import EjectOutlinedIcon from "@material-ui/icons/EjectOutlined";
 
 import moment from "moment";
 import { useDispatch } from "react-redux";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import useStyles from "./styles";
 import { deletePost, likePost, dislikePost } from "../../../actions/posts";
@@ -28,13 +28,13 @@ import { deletePost, likePost, dislikePost } from "../../../actions/posts";
 const Post = ({ post, setCurrentId }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
 
   const user = JSON.parse(localStorage.getItem("profile"));
 
-  const openPost = () => {
-    history.push(`/posts/${post._id}`);
-  };
+  // const openPost = () => {
+  //   history.push(`/posts/${post._id}`);
+  // };
 
   const UpVote = () => {
     if (post.upvotes.length > 0) {
@@ -159,35 +159,35 @@ const Post = ({ post, setCurrentId }) => {
               {moment(post.createdAt).fromNow()}
             </Typography>
           </div>
-          <ButtonBase className={classes.cardAction} onClick={openPost}>
-            <Typography className={classes.title} variant="h5">
-              {post.title}
-            </Typography>
-            {post?.selectedFile && (
-              <CardMedia
-                className={classes.media}
-                image={post.selectedFile}
-                title={post.title}
-              />
-            )}
-            {/* <div className={classes.details}>
+          {/* <ButtonBase className={classes.cardAction} onClick={openPost}> */}
+          <Typography className={classes.title} variant="h5">
+            {post.title}
+          </Typography>
+          {post?.selectedFile && (
+            <CardMedia
+              className={classes.media}
+              image={post.selectedFile}
+              title={post.title}
+            />
+          )}
+          {/* <div className={classes.details}>
               <Typography color="error" variant="body2">
                 {post.tags.map((tag) => `#${tag} `)}
               </Typography>
             </div> */}
-            {/* <Typography className={classes.title} variant="h5">
+          {/* <Typography className={classes.title} variant="h5">
               {post.title}
             </Typography> */}
-            <CardContent>
-              <Typography
-                className={classes.paragraph}
-                variant="body2"
-                component="p"
-              >
-                {post.message}
-              </Typography>
-            </CardContent>
-          </ButtonBase>
+          <CardContent>
+            <Typography
+              className={classes.paragraph}
+              variant="body2"
+              component="p"
+            >
+              {post.message}
+            </Typography>
+          </CardContent>
+          {/* </ButtonBase> */}
         </Grid>
       </Grid>
     </Card>
