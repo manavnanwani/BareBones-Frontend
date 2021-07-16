@@ -109,10 +109,11 @@ const Navbar = () => {
             <div className={classes.userInfo}>
               <Avatar
                 className={classes.purple}
-                src={user.result.imageURL}
+                // src={user.result.imageURL}
+                src="https://styles.redditmedia.com/t5_23lni3/styles/profileIcon_snoo38b947d5-0f17-47f4-9cf0-f106f40ce514-headshot.png?width=256&height=256&crop=256:256,smart&s=77885e690ff32a5fe04b5a0e6e610670ed70aa98"
                 alt={user.result.name}
               >
-                {user.result.name.charAt(0)}
+                {/* {user.result.name.charAt(0)} */}
               </Avatar>
               <Typography className={classes.userName} variant="h6">
                 {user.result.name}

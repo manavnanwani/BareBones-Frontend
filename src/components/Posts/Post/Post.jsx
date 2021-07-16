@@ -141,7 +141,7 @@ const Post = ({ post, setCurrentId }) => {
                   component={Link}
                   to="/posts/submit"
                 >
-                  <MoreHorizIcon fontSize="default" />
+                  {/* <MoreHorizIcon fontSize="default" /> */}
                 </Button>
               )}
             </div>
