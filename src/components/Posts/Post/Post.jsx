@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import {
   Card,
@@ -24,10 +24,13 @@ import { Link } from "react-router-dom";
 
 import useStyles from "./styles";
 import { deletePost, likePost, dislikePost } from "../../../actions/posts";
+import { IdContext } from "../../../context/idContext";
 
-const Post = ({ post, setCurrentId }) => {
+const Post = ({ post }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  // eslint-disable-next-line
+  const [currentId, setCurrentId] = useContext(IdContext);
   // const history = useHistory();
 
   const user = JSON.parse(localStorage.getItem("profile"));

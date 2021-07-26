@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Grow, Grid, Paper, Button } from "@material-ui/core";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -9,12 +9,15 @@ import useStyles from "./styles";
 
 import Community from "./Community";
 import Create from "./Create";
+import { IdContext } from "../../context/idContext";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-const Home = ({ currentId, setCurrentId }) => {
+const Home = () => {
+  // eslint-disable-next-line
+  const [currentId, setCurrentId] = useContext(IdContext);
   const classes = useStyles();
   const query = useQuery();
   var { subData } = useSelector((state) => state.subs);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, updatePost } from "../../actions/posts";
@@ -18,7 +18,10 @@ import {
 import TextField from "@material-ui/core/TextField";
 import useStyles from "./styles";
 
-const Form = ({ currentId, setCurrentId }) => {
+import { IdContext } from "../../context/idContext";
+
+const Form = () => {
+  const [currentId, setCurrentId] = useContext(IdContext);
   const post = useSelector((state) =>
     currentId
       ? state.posts.posts.find((message) => message._id === currentId)
