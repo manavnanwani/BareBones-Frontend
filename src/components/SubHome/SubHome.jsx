@@ -14,7 +14,7 @@ const SubHome = () => {
       <Container maxWidth="md">
         <Paper className={classes.paper}>
           <Typography variant="h6" align="center" style={{ color: "white" }}>
-            All Sub-Reddits
+            All Communities
           </Typography>
         </Paper>
         {subData?.map((sub) => (

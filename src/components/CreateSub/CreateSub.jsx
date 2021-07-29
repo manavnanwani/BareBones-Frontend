@@ -34,7 +34,7 @@ const CreateSub = () => {
       <Container maxWidth="md">
         <Paper className={classes.paper}>
           <Typography variant="h6" align="center" style={{ color: "white" }}>
-            Please Sign In to Create A New SubReddit!!
+            Please Sign In to Create A New Community!!
           </Typography>
         </Paper>
       </Container>
@@ -51,7 +51,7 @@ const CreateSub = () => {
           onSubmit={handleSubmit}
         >
           <Typography variant="h6" style={{ color: "white" }}>
-            Create Your SubReddit
+            Create a new community
           </Typography>
           <TextField
             className={classes.textField}

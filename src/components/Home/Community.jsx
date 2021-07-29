@@ -42,7 +42,7 @@ const Community = ({ subData }) => {
             </Grid>
             <Grid item sm={10}>
               <Typography variant="body1" style={{ color: "white" }}>
-                r/{sub.title}
+                b/{sub.title}
               </Typography>
             </Grid>
           </Grid>

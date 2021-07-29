@@ -124,13 +124,13 @@ const Form = () => {
             onChange={(e) => setPostData({ ...postData, sub: e.target.value })}
           /> */}
           <FormControl variant="outlined" fullWidth>
-            <InputLabel>Sub-Reddit</InputLabel>
+            <InputLabel>Community</InputLabel>
             <Select
               value={postData.subReddit}
               onChange={(e) =>
                 setPostData({ ...postData, subReddit: e.target.value })
               }
-              label="Sub-Reddit"
+              label="Community"
             >
               {subData?.map((sub) => (
                 <MenuItem key={sub._id} value={sub.title}>

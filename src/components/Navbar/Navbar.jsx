@@ -16,7 +16,7 @@ import useStyles from "./styles";
 import { useDispatch } from "react-redux";
 import { getPostsBySearch } from "../../actions/posts";
 import { fetchSubs } from "../../actions/sub";
-import logo from "../../images/reddit-logo.png";
+import logo from "../../images/logo.png";
 
 const Navbar = () => {
   const classes = useStyles();
@@ -61,7 +61,10 @@ const Navbar = () => {
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <Link to="/" className={classes.brandContainer}>
-        <img src={logo} alt="" style={{ width: "80%" }} />
+        <img src={logo} alt="" style={{ width: "44px" }} />
+        <Typography className={classes.logo} variant="h6">
+          BareBones
+        </Typography>
       </Link>
       <TextField
         className={classes.searchButton}

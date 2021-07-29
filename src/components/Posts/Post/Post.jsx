@@ -153,7 +153,7 @@ const Post = ({ post }) => {
         <Grid item style={{ paddingLeft: "0px" }} sm={12} md={11}>
           <div style={{ display: "flex", padding: "5px 6px" }}>
             <Typography variant="body1" style={{}}>
-              r/{post.subReddit}{" "}
+              b/{post.subReddit}{" "}
             </Typography>
             <Typography variant="body2" className={classes.firstpart}>
               Posted By {post.name}

@@ -37,7 +37,7 @@ const Create = () => {
           style={{ color: "white", margin: "10px 0" }}
           variant="body2"
         >
-          Your personal Reddit frontpage. Come here to check in with your
+          Your personal BareBones frontpage. Come here to check in with your
           favorite communities.
         </Typography>
         <Button
@@ -57,7 +57,7 @@ const Create = () => {
           to="/sub/create"
           fullWidth
         >
-          Create New Sub Reddit
+          Create New Community
         </Button>
       </div>
     </Paper>
