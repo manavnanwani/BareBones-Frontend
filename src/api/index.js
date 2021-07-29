@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const API = axios.create({ baseURL: "http://localhost:5000" });
 const API = axios.create({
-  baseURL: "https://reddit-clone-manav.herokuapp.com/",
+  baseURL: "https://barebones-mern.herokuapp.com/",
 });
 
 API.interceptors.request.use((req) => {
