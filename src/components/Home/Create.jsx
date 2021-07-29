@@ -26,7 +26,7 @@ const Create = () => {
             style={{
               color: "#d7dadc",
               display: "flex",
-              alignItems: "end",
+              alignItems: "flex-end",
             }}
             variant="h6"
           >
