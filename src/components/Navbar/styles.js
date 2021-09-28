@@ -86,4 +86,17 @@ export default makeStyles((theme) => ({
     textDecoration: "none",
     marginLeft: "10px",
   },
+  [theme.breakpoints.down("sm")]: {
+    logo: {
+      display: "none",
+    },
+    logoImage: {
+      width: "34px !important",
+    },
+    searchButton: {
+      width: "150px",
+      minWidth: "150px !important",
+      // marginLeft: "50px",
+    },
+  },
 }));

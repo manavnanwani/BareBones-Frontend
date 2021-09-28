@@ -23,7 +23,7 @@ const Navbar = () => {
   const history = useHistory();
   const location = useLocation();
   const dispatch = useDispatch();
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const [user, setUser] = useState(localStorage.getItem("profile"));
   const [search, setSearch] = useState("");
 
   const handleKeyPress = (e) => {
@@ -61,7 +61,12 @@ const Navbar = () => {
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <Link to="/" className={classes.brandContainer}>
-        <img src={logo} alt="" style={{ width: "44px" }} />
+        <img
+          src={logo}
+          alt=""
+          style={{ width: "44px" }}
+          className={classes.logoImage}
+        />
         <Typography className={classes.logo} variant="h6">
           BareBones
         </Typography>
