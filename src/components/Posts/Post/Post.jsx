@@ -13,10 +13,12 @@ import {
 import DeleteIcon from "@material-ui/icons/Delete";
 // import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
-import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
-import ArrowDropDownCircleOutlinedIcon from "@material-ui/icons/ArrowDropDownCircleOutlined";
-import EjectRoundedIcon from "@material-ui/icons/EjectRounded";
-import EjectOutlinedIcon from "@material-ui/icons/EjectOutlined";
+// import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
+// import ArrowDropDownCircleOutlinedIcon from "@material-ui/icons/ArrowDropDownCircleOutlined";
+// import EjectRoundedIcon from "@material-ui/icons/EjectRounded";
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
+// import EjectOutlinedIcon from "@material-ui/icons/EjectOutlined";
 
 import moment from "moment";
 import { useDispatch } from "react-redux";
@@ -45,18 +47,18 @@ const Post = ({ post }) => {
         (like) => like === (user?.result?.googleId || user?.result?._id)
       ) ? (
         <>
-          <EjectRoundedIcon color="primary" />
+          <ArrowCircleUpIcon color="primary" />
         </>
       ) : (
         <>
-          <EjectOutlinedIcon color="primary" />
+          <ArrowCircleUpIcon color="primary" />
         </>
       );
     }
 
     return (
       <>
-        <EjectOutlinedIcon color="primary" />
+        <ArrowCircleUpIcon color="primary" />
       </>
     );
   };
@@ -66,18 +68,18 @@ const Post = ({ post }) => {
         (like) => like === (user?.result?.googleId || user?.result?._id)
       ) ? (
         <>
-          <ArrowDropDownCircleIcon color="secondary" />
+          <ArrowCircleDownIcon color="secondary" />
         </>
       ) : (
         <>
-          <ArrowDropDownCircleOutlinedIcon color="secondary" />
+          <ArrowCircleDownIcon color="secondary" />
         </>
       );
     }
 
     return (
       <>
-        <ArrowDropDownCircleOutlinedIcon color="secondary" />
+        <ArrowCircleDownIcon color="secondary" />
       </>
     );
   };
@@ -151,7 +153,10 @@ const Post = ({ post }) => {
           </CardActions>
         </Grid>
         <Grid item style={{ paddingLeft: "0px" }} sm={12} md={11}>
-          <div style={{ display: "flex", padding: "5px 6px" }}>
+          <div
+            style={{ display: "flex", padding: "5px 6px" }}
+            className={classes.postAbove}
+          >
             <Typography variant="body1" style={{}}>
               b/{post.subReddit}{" "}
             </Typography>
@@ -181,7 +186,7 @@ const Post = ({ post }) => {
           {/* <Typography className={classes.title} variant="h5">
               {post.title}
             </Typography> */}
-          <CardContent>
+          <CardContent className={classes.paragraphParent}>
             <Typography
               className={classes.paragraph}
               variant="body2"

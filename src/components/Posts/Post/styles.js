@@ -93,7 +93,7 @@ export default makeStyles((theme) => ({
   },
   [theme.breakpoints.down("sm")]: {
     mainContainer: {
-      flexDirection: "column-reverse",
+      flexDirection: "column",
     },
     cardActions: {
       flexDirection: "row",
@@ -101,6 +101,13 @@ export default makeStyles((theme) => ({
     updown: {
       display: "flex",
       flexDirection: "row",
+      alignItems: "center",
+    },
+    postAbove: {
+      flexDirection: "column",
+    },
+    paragraphParent: {
+      paddingBottom: "60px !important",
     },
   },
   userActions: {
